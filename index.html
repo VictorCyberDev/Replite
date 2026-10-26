@@ -24,8 +24,8 @@
     <main>
       <section class="hero">
         <p class="hero-kicker">Horseplay · Taekwondo · The Astronaut Lovers</p>
-        <h2>Pick the exact film, then choose the available file quality.</h2>
-        <p class="muted">No AI subscription. No movie storage on Vercel. No paste-a-link workflow.</p>
+        <h2>Tap Download on any film, then choose the available file quality.</h2>
+        <p class="muted">Replite matches the exact movie title and year before it exposes a direct file. Download options appear only for verified openly licensed/public-domain sources.</p>
         <form id="searchForm" class="searchbar">
           <input id="searchInput" type="search" placeholder="Search any movie title…" autocomplete="off" />
           <button type="submit">Search</button>
@@ -41,7 +41,7 @@
       <section class="stats" aria-label="catalog statistics">
         <div><strong id="catalogCount">0</strong><span>catalog titles</span></div>
         <div><strong id="watchedCount">0</strong><span>marked watched</span></div>
-        <div><strong id="downloadCount">AUTO</strong><span>source checks</span></div>
+        <div><strong id="downloadCount">AUTO</strong><span>verified source checks</span></div>
       </section>
 
       <section class="section-head">
@@ -74,7 +74,7 @@
         <p class="movie-meta"></p>
         <p class="movie-note"></p>
         <div class="card-actions">
-          <button class="open-card primary">Open</button>
+          <button class="open-card primary" aria-label="Check download qualities for this movie">Download</button>
           <button class="watch-toggle ghost"></button>
         </div>
       </div>
@@ -82,5 +82,6 @@
   </template>
 
   <script type="module" src="/app-v3.js"></script>
+  <script type="module" src="/download-helper-v4.js"></script>
 </body>
 </html>
