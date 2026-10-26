@@ -4,9 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#0b0b0d" />
-  <meta name="description" content="Private queer cinema discovery and download catalog." />
+  <meta name="description" content="Private queer cinema discovery and verified download catalog." />
   <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icon-192.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/ui-v3.css" />
   <title>Replite Cinema</title>
 </head>
 <body>
@@ -16,14 +18,14 @@
         <p class="eyebrow">PRIVATE CINEMA</p>
         <h1>Replite</h1>
       </div>
-      <button id="installBtn" class="ghost hidden">Install</button>
+      <button id="installBtn" class="ghost hidden">Install app</button>
     </header>
 
     <main>
       <section class="hero">
         <p class="hero-kicker">Horseplay · Taekwondo · The Astronaut Lovers</p>
-        <h2>Find the exact film. Verify it. Download only the file you actually chose.</h2>
-        <p class="muted">No AI required. Search is title-first, poster-first and identity-checked.</p>
+        <h2>Pick the exact film, then choose the available file quality.</h2>
+        <p class="muted">No AI subscription. No movie storage on Vercel. No paste-a-link workflow.</p>
         <form id="searchForm" class="searchbar">
           <input id="searchInput" type="search" placeholder="Search any movie title…" autocomplete="off" />
           <button type="submit">Search</button>
@@ -39,7 +41,7 @@
       <section class="stats" aria-label="catalog statistics">
         <div><strong id="catalogCount">0</strong><span>catalog titles</span></div>
         <div><strong id="watchedCount">0</strong><span>marked watched</span></div>
-        <div><strong id="downloadCount">0</strong><span>saved sources</span></div>
+        <div><strong id="downloadCount">AUTO</strong><span>source checks</span></div>
       </section>
 
       <section class="section-head">
@@ -47,7 +49,7 @@
           <p class="eyebrow" id="sectionEyebrow">CURATED FIRST</p>
           <h3 id="sectionTitle">Closest to your niche</h3>
         </div>
-        <button id="loadCatalogBtn" class="ghost">Load up to 2,000 titles</button>
+        <button id="loadCatalogBtn" class="ghost">Load full catalog</button>
       </section>
 
       <div id="status" class="status"></div>
@@ -79,6 +81,6 @@
     </article>
   </template>
 
-  <script type="module" src="/app-v2.js"></script>
+  <script type="module" src="/app-v3.js"></script>
 </body>
 </html>
