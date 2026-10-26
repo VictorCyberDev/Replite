@@ -3,55 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#0b0b0d" />
-  <meta name="description" content="Private queer cinema discovery and verified download catalog." />
+  <meta name="theme-color" content="#09090b" />
+  <meta name="description" content="Private queer cinema download catalog with source-backed files." />
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="icon" href="/icon-192.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/styles.css" />
-  <link rel="stylesheet" href="/ui-v3.css" />
+  <link rel="stylesheet" href="/styles-v4.css" />
   <title>Replite Cinema</title>
 </head>
 <body>
   <div class="shell">
     <header class="topbar">
-      <div>
-        <p class="eyebrow">PRIVATE CINEMA</p>
-        <h1>Replite</h1>
-      </div>
-      <button id="installBtn" class="ghost hidden">Install app</button>
+      <div><p class="eyebrow">PRIVATE CINEMA</p><h1>Replite</h1></div>
+      <button id="installBtn" class="ghost">Install app</button>
     </header>
 
     <main>
       <section class="hero">
-        <p class="hero-kicker">Horseplay · Taekwondo · The Astronaut Lovers</p>
-        <h2>Tap Download on any film, then choose the available file quality.</h2>
-        <p class="muted">Replite matches the exact movie title and year before it exposes a direct file. Download options appear only for verified openly licensed/public-domain sources.</p>
+        <p class="hero-kicker">Horseplay · Taekwondo · The Astronaut Lovers taste bias</p>
+        <h2>Only movies with a downloadable file appear here.</h2>
+        <p class="muted">Every card is pulled from a Creative Commons movie record that already advertises an MPEG‑4 file. Tap Download to choose the real file size and available resolution.</p>
         <form id="searchForm" class="searchbar">
-          <input id="searchInput" type="search" placeholder="Search any movie title…" autocomplete="off" />
-          <button type="submit">Search</button>
+          <input id="searchInput" type="search" placeholder="Search these 500 downloadable movies…" autocomplete="off" />
+          <button class="primary" type="submit">Search</button>
         </form>
-        <div class="chips" id="quickChips">
-          <button data-filter="taste" class="chip active">Closest to my taste</button>
-          <button data-filter="catalog" class="chip">Explore gay cinema</button>
-          <button data-filter="unwatched" class="chip">Unwatched</button>
-          <button data-filter="watched" class="chip">Watched</button>
-        </div>
       </section>
 
-      <section class="stats" aria-label="catalog statistics">
-        <div><strong id="catalogCount">0</strong><span>catalog titles</span></div>
-        <div><strong id="watchedCount">0</strong><span>marked watched</span></div>
-        <div><strong id="downloadCount">AUTO</strong><span>verified source checks</span></div>
+      <section class="stats">
+        <div><strong id="catalogCount">0</strong><span>downloadable titles</span></div>
+        <div><strong>CC</strong><span>source license required</span></div>
+        <div><strong>MP4</strong><span>movie file required</span></div>
       </section>
 
       <section class="section-head">
-        <div>
-          <p class="eyebrow" id="sectionEyebrow">CURATED FIRST</p>
-          <h3 id="sectionTitle">Closest to your niche</h3>
-        </div>
-        <button id="loadCatalogBtn" class="ghost">Load full catalog</button>
+        <div><p class="eyebrow">SOURCE-FIRST CATALOG</p><h2>500 downloadable queer-film records</h2></div>
+        <p id="resultCount" class="result-line"></p>
       </section>
-
       <div id="status" class="status"></div>
       <section id="grid" class="movie-grid" aria-live="polite"></section>
       <button id="loadMoreBtn" class="load-more hidden">Show more</button>
@@ -63,25 +49,6 @@
     <div id="dialogBody"></div>
   </dialog>
 
-  <template id="cardTemplate">
-    <article class="movie-card">
-      <button class="poster-wrap open-card">
-        <img class="poster" alt="" loading="lazy" />
-        <span class="score-badge"></span>
-      </button>
-      <div class="card-body">
-        <h4 class="movie-title"></h4>
-        <p class="movie-meta"></p>
-        <p class="movie-note"></p>
-        <div class="card-actions">
-          <button class="open-card primary" aria-label="Check download qualities for this movie">Download</button>
-          <button class="watch-toggle ghost"></button>
-        </div>
-      </div>
-    </article>
-  </template>
-
-  <script type="module" src="/app-v3.js"></script>
-  <script type="module" src="/download-helper-v4.js"></script>
+  <script type="module" src="/app-v4.js"></script>
 </body>
 </html>
