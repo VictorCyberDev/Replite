@@ -1,10 +1,19 @@
 {
+  "id":"/",
   "name":"Replite Cinema",
   "short_name":"Replite",
   "description":"Private queer cinema discovery and verified download catalog.",
   "start_url":"/",
+  "scope":"/",
   "display":"standalone",
+  "display_override":["standalone","minimal-ui"],
   "background_color":"#0b0b0d",
   "theme_color":"#0b0b0d",
-  "orientation":"portrait-primary"
+  "orientation":"portrait-primary",
+  "prefer_related_applications":false,
+  "categories":["entertainment","lifestyle"],
+  "icons":[
+    {"src":"/icon-192.svg","sizes":"192x192","type":"image/svg+xml","purpose":"any"},
+    {"src":"/icon-512.svg","sizes":"512x512","type":"image/svg+xml","purpose":"any maskable"}
+  ]
 }
